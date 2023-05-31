@@ -23,6 +23,7 @@ runs:
           echo "${{ inputs.docker-auth-token }}" | docker login --username awiciroh --password-stdin
 
     - name: Create Cache and Builder for Buildx
+      shell: bash
       run: |
           docker buildx create --use --name mybuilder --node mybuilder
 
