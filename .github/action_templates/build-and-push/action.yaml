@@ -23,6 +23,7 @@ runs:
           echo "${{ inputs.docker-auth-token }}" | docker login --username awiciroh --password-stdin
     
     - name: Create Cache and Builder for Buildx
+      shell: bash
       run: |
           docker buildx create --use --name mybuilder --node mybuilder
 
@@ -30,7 +31,7 @@ runs:
       uses: docker/build-push-action@v2
       with:
         context: ./docker
-        file: ./docker/Dockerfile.t-route
+        file: ./docker/Dockerfile.${{ inputs.image-name}}
         push: true
         platforms: linux/arm64
         tags: |
