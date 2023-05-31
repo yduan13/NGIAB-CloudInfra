@@ -8,25 +8,38 @@ inputs:
   github-sha:
     description: 'github sha hash for tagging image'
     required: true
-  image-platform:
-    description: 'Platform of the image to be built'
+  image-name:
+    description: 'image name to be built'
     required: true
 runs:
   using: "composite"
   steps:
+    - name: deploy
+      uses: actions/checkout@v2
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v1
+
     - name: Login to Docker Hub
       shell: bash
       run: |
-          echo "${{ inputs.docker-auth-token }}" | docker login --username awiciroh --password-stdin
-    - name: Clean docker cache
-      shell: bash
+          echo "${{ secrets.DOCKER_AUTH_TOKEN }}" | docker login --username awiciroh --password-stdin
+
+    - name: Create Cache and Builder for Buildx
       run: |
-        docker system prune -af
-    - name: Build and tag Docker image
-      shell: bash
-      run: docker build -t awiciroh/ciroh-ngen-image:${{ inputs.github-sha }} -t awiciroh/ciroh-ngen-image:latest-${{ inputs.image-platform }} docker/.      
-    - name: Push Docker image
-      shell: bash
-      run: |
-        docker push awiciroh/ciroh-ngen-image:${{ inputs.github-sha }} 
-        #docker push awiciroh/ciroh-ngen-image:latest-${{ inputs.image-platform }}
+          docker buildx create --use --name mybuilder --node mybuilder
+
+    - name: Build and Cache Docker Image
+      uses: docker/build-push-action@v2
+      with:
+        context: ./docker
+        file: ./docker/Dockerfile.${{ inputs.image-name}}
+        push: true
+        platforms: linux/arm64
+        tags: |
+          awiciroh/${{ inputs.image-name}}:latest
+          awiciroh/${{ inputs.image-name}}:${{ inputs.github-sha }} 
+        builder: mybuilder
+      env:
+        DOCKER_BUILDKIT: 1
+        DOCKER_CLI_EXPERIMENTAL: enabled
