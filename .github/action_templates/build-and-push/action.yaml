@@ -36,7 +36,6 @@ runs:
         platforms: linux/arm64
         tags: |
           awiciroh/${{ inputs.image-name}}:latest
-          awiciroh/${{ inputs.image-name}}:${{ inputs.github.sha }}
         builder: mybuilder
       env:
         DOCKER_BUILDKIT: 1
