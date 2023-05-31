@@ -34,7 +34,8 @@ runs:
         file: ./docker/Dockerfile.${{ inputs.image-name}}
         push: true
         platforms: linux/arm64
-        tags: [awiciroh/${{ inputs.image-name}}:latest,awiciroh/${{ inputs.github-sha}}:latest]
+        tags: |
+          awiciroh/${{ inputs.image-name}}:latest
         builder: mybuilder
       env:
         DOCKER_BUILDKIT: 1
