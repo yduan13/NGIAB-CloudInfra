@@ -32,9 +32,6 @@ runs:
       with:
         context: ./docker
         file: ./docker/Dockerfile.${{ inputs.image-name}}
-        {{ if eq inputs.image-name "ciroh-ngen-image" }}
-        file: ./docker/Dockerfile
-        {{ end }}
         push: true
         platforms: linux/arm64
         tags: |
