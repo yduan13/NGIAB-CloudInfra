@@ -1,4 +1,4 @@
-name: Build and Push Docker image to Docker Hub
+name: Build and Push ngen docker image to Docker Hub
 on:
   push:
     branches: [ main ]
@@ -18,3 +18,4 @@ jobs:
           docker-auth-token: ${{ secrets.DOCKER_AUTH_TOKEN }}
           github-sha: ${{ github.sha }}
           image-name: "ngen"
+          dockerfile-name: "Dockerfile.ngen"

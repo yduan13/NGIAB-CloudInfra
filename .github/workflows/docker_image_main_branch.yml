@@ -18,3 +18,4 @@ jobs:
           docker-auth-token: ${{ secrets.DOCKER_AUTH_TOKEN }}
           github-sha: ${{ github.sha }}
           image-name: "ciroh-ngen-image"
+          dockerfile-name: "Dockerfile"
