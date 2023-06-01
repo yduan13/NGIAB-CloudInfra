@@ -11,6 +11,10 @@ inputs:
   image-name:
     description: 'image name to be built'
     required: true
+  dockerfile-name:
+    description: 'The name of dockerfile to use'
+    required: true
+
 runs:
   using: "composite"
   steps:
@@ -31,7 +35,7 @@ runs:
       uses: docker/build-push-action@v2
       with:
         context: ./docker
-        file: ./docker/Dockerfile.${{ inputs.image-name}}
+        file: ./docker/${{ inputs.dockerfile-name}}
         push: true
         platforms: linux/arm64
         tags: |
