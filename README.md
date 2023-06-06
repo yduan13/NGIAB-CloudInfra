@@ -52,16 +52,13 @@ This repository contains :
 
 
 #### Windows Steps:
-```Windows
-    Use browser to download the data from https://ciroh-ua-ngen-data.s3.us-east-2.amazonaws.com/AWI-001/AWI_03W_113060_001.tar.gz
-   
+```Windows  
     $ mkdir NextGen
     $ cd NextGen
     $ mkdir ngen-data
     $ cd ngen-data
-    $ Open browser and download data from here: https://ciroh-ua-ngen-data.s3.us-east-2.amazonaws.com/AWI-001/AWI_03W_113060_001.tar.gz
-    and copy the downloaded file to ngen-data folder.
-    Use WinRAR to extract the files from the tar bundle.
+    $ Invoke-WebRequest -Uri "https://ciroh-ua-ngen-data.s3.us-east-2.amazonaws.com/AWI-001/AWI_03W_113060_001.tar.gz"
+    $ tar -xzf "\AWI_03W_113060_001.tar.gz"
     $ cd AWI_03W_113060_001
 ```
 
@@ -69,10 +66,11 @@ This repository contains :
 
 ### Clone CloudInfra repo
 
-Clone the repo using below commands:
-```
-$ cd NextGen  
-$ git clone https://github.com/AlabamaWaterInstitute/CloudInfra.git
+1- Navigate to NextGen directory 
+
+2- Clone the repo using below commands:
+``` 
+$ git clone https://github.com/CIROH-UA/CloudInfra.git
 
 $ cd CloudInfra
 ```  
@@ -80,13 +78,22 @@ Once you are in *CloudInfra* directory, you should see `guide.sh` in it. Now, we
 
 ### How to run the model script?
 
+#### Linux and Mac Steps:
 Follow below steps to run `guide.sh` script 
 ```
     # Note: Make sure you are in ~/Documents/NextGen/CloudInfra directory
     $ ./guide.sh   
     
 ```
-
+#### Windows Steps:
+```Windows  
+   # Note: Make sure you are in ~/NextGen/CloudInfra directory
+    $ .\guide.ps1
+   #Note: in case you get this error "\guide.ps1 cannot be loaded because running scripts is disabled on     this system." make sure the PowerShell is ran as adminstrator and run the following commands:
+    $ Get-ExecutionPolicy
+    $ Set-ExecutionPolicy RemoteSigned
+    $ .\guide.ps1
+```
 ### Output of the model guide script
 
 >*What you will see when you run above `guide.sh`?*
