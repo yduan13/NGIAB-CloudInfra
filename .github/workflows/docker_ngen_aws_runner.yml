@@ -1,4 +1,4 @@
-name: Build and Push ngen docker image to Docker Hub
+name: AWS Runner Build and Push ngen docker image to Docker Hub
 on:
   push:
     branches: [ main ]
