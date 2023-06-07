@@ -72,7 +72,7 @@ This repository contains :
 Clone the repo using below commands:
 ```
 $ cd NextGen  
-$ git clone https://github.com/AlabamaWaterInstitute/CloudInfra.git
+$ git clone https://github.com/CIROH-UA/CloudInfra.git
 
 $ cd CloudInfra
 ```  
