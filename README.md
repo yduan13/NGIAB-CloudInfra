@@ -69,7 +69,8 @@ This repository contains :
 1- Navigate to NextGen directory 
 
 2- Clone the repo using below commands:
-``` 
+
+```
 $ git clone https://github.com/CIROH-UA/CloudInfra.git
 
 $ cd CloudInfra
