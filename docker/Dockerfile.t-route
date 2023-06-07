@@ -26,7 +26,7 @@ RUN cd ${WORKDIR} \
 ################################################################################################################
 ################################################################################################################
 ##### Create intermediate Docker build stage for building t-route in Rocky Linux environment
-FROM rocky-ngen-deps as rocky_build_troute
+FROM awiciroh/ngen-deps:latest as rocky_build_troute
 
 ARG REPO_URL \
     BRANCH \
