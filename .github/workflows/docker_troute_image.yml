@@ -1,4 +1,4 @@
-name: Build and Push ARM Docker image to Docker Hub
+name: Build and Push t-route docker image to Docker Hub
 on:
   push:
     branches: [ main ]
@@ -20,6 +20,5 @@ jobs:
         with:
           docker-auth-token: ${{ secrets.DOCKER_AUTH_TOKEN }}
           github-sha: ${{ github.sha }}
-          image-name: "ciroh-ngen-image"
-          dockerfile-name: "Dockerfile"
-      
+          image-name: "t-route"
+          dockerfile-name: "Dockerfile.t-route"

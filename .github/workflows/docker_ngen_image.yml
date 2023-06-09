@@ -1,4 +1,4 @@
-name: Build and Push ARM Docker image to Docker Hub
+name: Build and Push ngen docker image to Docker Hub
 on:
   push:
     branches: [ main ]
@@ -9,9 +9,6 @@ on:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-          architecture: [arm64]
     steps:
       - name: deploy
         uses: actions/checkout@v2
@@ -20,6 +17,5 @@ jobs:
         with:
           docker-auth-token: ${{ secrets.DOCKER_AUTH_TOKEN }}
           github-sha: ${{ github.sha }}
-          image-name: "ciroh-ngen-image"
-          dockerfile-name: "Dockerfile"
-      
+          image-name: "ngen"
+          dockerfile-name: "Dockerfile.ngen"
