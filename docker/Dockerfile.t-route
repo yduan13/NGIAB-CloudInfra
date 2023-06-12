@@ -11,6 +11,7 @@ ARG TROUTE_REPO_URL=https://github.com/NOAA-OWP/t-route.git \
 ##### Create intermediate Docker build stage for building t-route in Rocky Linux environment
 FROM awiciroh/ngen-deps:latest as rocky_init_troute_repo
 ARG TROUTE_REPO_URL \
+    TROUTE_BRANCH \
     TROUTE_COMMIT \
     WORKDIR \
     UPDATE=2023-04-26
