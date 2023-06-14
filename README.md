@@ -1,5 +1,11 @@
 # Welcome to NextGen Framework National Water Model Community Repo. (NextGen In A Box).
 
+We are doing a case study : NWM run for Sipsey Fork,Black Warrior river
+- We don’t want to run all of CONUS
+- We want to run NextGen locally
+- We want to have control over inputs / config.
+- How can we do it? Answer: NextGen-In-A-Box
+
 This repository contains :
 - **Dockerfile** for running NextGen Framework (docker/Dockerfile)
 - **Terraform** configuration files for provisioning infrastructure in AWS (terraform/README.md)
