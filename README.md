@@ -26,7 +26,7 @@ This repository contains :
 
 ## Prerequisites:
 
-### Install docker:
+### Install docker and validate docker is up:
     - On *Windows*:
         - [Install Docker Desktop on Windows](https://docs.docker.com/desktop/install/windows-install/#install-docker-desktop-on-windows)
         - Once docker is installed, start Docker Destop.
@@ -72,9 +72,6 @@ This repository contains :
 
 12. After the setup is complete, you can use the Linux distribution through WSL on your Windows system.
 
-
-
-
     
 ### Download the input data in "ngen-data" folder from S3 bucket :
 
@@ -108,9 +105,7 @@ This repository contains :
 
 ### Clone CloudInfra repo
 
-1- Navigate to NextGen directory 
-
-2- Clone the repo using below commands:
+Navigate to NextGen directory and clone the repo using below commands:
 
 ```
 $ git clone https://github.com/CIROH-UA/CloudInfra.git
@@ -181,6 +176,7 @@ Example NGEN run command for serial mode:
 /ngen/ngen/data/config/awi_simplified_realization.json
 ```
 - After the model has finished running, the script prompts the user whether they want to continue.
-- If the user selects yes, the script opens an interactive shell. If the user selects no, the script exits.
+- If the user selects 1, the script opens an interactive shell. If the user selects 2, then the script copies the output data from container to local machine.
+- If the user selects 3, then the script exits.
 
-The output files are copied to the `outputs` folder in `HOST_DATA_PATH`.
+The output files are copied to the `outputs` folder in 'NextGen/ngen-data/AWI_03W_113060_001/' directory.
