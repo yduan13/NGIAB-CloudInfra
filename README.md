@@ -4,10 +4,10 @@ We are doing a case study : NWM run for Sipsey Fork,Black Warrior river
 - We don’t want to run all of CONUS
 - We want to run NextGen locally
 - We want to have control over inputs / config.
-- How can we do it? Answer: NextGen-In-A-Box
+- How can we do it? Answer: NextGen In A Box
 
 This repository contains :
-- **Dockerfile** for running NextGen Framework (docker/Dockerfile)
+- **Dockerfile** for running NextGen Framework (docker/Dockerfile*)
 - **Terraform** configuration files for provisioning infrastructure in AWS (terraform/README.md)
 - Documentation of how to use the **infrastructure** and run the model. (README.md)
 
@@ -101,7 +101,7 @@ This repository contains :
     $ cd AWI_03W_113060_001
 ```
 
-## Run NextGen-In-A-Box
+## Run NextGen In A Box
 
 ### Clone CloudInfra repo
 
@@ -179,4 +179,4 @@ Example NGEN run command for serial mode:
 - If the user selects 1, the script opens an interactive shell. If the user selects 2, then the script copies the output data from container to local machine.
 - If the user selects 3, then the script exits.
 
-The output files are copied to the `outputs` folder in 'NextGen/ngen-data/AWI_03W_113060_001/' directory.
+The output files are copied to the `outputs` folder in '/NextGen/ngen-data/AWI_03W_113060_001/' directory.
