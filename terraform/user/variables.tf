@@ -44,7 +44,7 @@ variable "key_name" {
 variable "container_name" {
   description = "The name of the conatinerized model to run"
   type        = string
-  default     = "zwills/dmod_ngen_slim"
+  default     = "awiciroh/ciroh-ngen-image:latest"
 }
 
 
