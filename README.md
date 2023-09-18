@@ -108,7 +108,7 @@ This repository contains :
 Navigate to NextGen directory and clone the repo using below commands:
 
 ```
-$ git clone https://github.com/CIROH-UA/CloudInfra.git
+$ git clone https://github.com/CIROH-UA/NGIAB-CloudInfra.git
 
 $ cd CloudInfra
 ```  
