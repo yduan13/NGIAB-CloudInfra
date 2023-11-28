@@ -80,9 +80,9 @@ This repository contains :
 ```bash   
     $ mkdir -p NextGen/ngen-data
     $ cd NextGen/ngen-data
-    $ wget --no-parent https://ciroh-ua-ngen-data.s3.us-east-2.amazonaws.com/AWI-001/AWI_03W_113060_001.tar.gz
-    $ tar -xf AWI_03W_113060_001.tar.gz 
-    $ cd AWI_03W_113060_001
+    $ wget --no-parent https://ciroh-ua-ngen-data.s3.us-east-2.amazonaws.com/AWI-002/AWI_03W_113060_002.tar.gz
+    $ tar -xf AWI_03W_113060_002.tar.gz 
+    $ cd AWI_03W_113060_002
 ```
 
 
@@ -94,9 +94,9 @@ This repository contains :
     $ cd NextGen
     $ mkdir ngen-data
     $ cd ngen-data
-    $ Invoke-WebRequest -Uri "https://ciroh-ua-ngen-data.s3.us-east-2.amazonaws.com/AWI-001/AWI_03W_113060_001.tar.gz"
-    $ tar -xzf "\AWI_03W_113060_001.tar.gz"
-    $ cd AWI_03W_113060_001
+    $ Invoke-WebRequest -Uri "https://ciroh-ua-ngen-data.s3.us-east-2.amazonaws.com/AWI-002/AWI_03W_113060_002.tar.gz"
+    $ tar -xzf "\AWI_03W_113060_002.tar.gz"
+    $ cd AWI_03W_113060_002
 ```
 
 ## Run NextGen In A Box
@@ -178,4 +178,4 @@ Example NGEN run command for serial mode:
 - If the user selects 1, the script opens an interactive shell. If the user selects 2, then the script copies the output data from container to local machine.
 - If the user selects 3, then the script exits.
 
-The output files are copied to the `outputs` folder in '/NextGen/ngen-data/AWI_03W_113060_001/' directory.
+The output files are copied to the `outputs` folder in '/NextGen/ngen-data/AWI_03W_113060_002/' directory.
