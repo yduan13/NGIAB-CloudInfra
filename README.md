@@ -8,8 +8,7 @@ We are doing a case study : NWM run for Sipsey Fork,Black Warrior river
 
 This repository contains :
 - **Dockerfile** for running NextGen Framework (docker/Dockerfile*)
-- **Terraform** configuration files for provisioning infrastructure in AWS (terraform/README.md)
-- Documentation of how to use the **infrastructure** and run the model. (README.md)
+- Documentation of how to run the model. (README.md)
 
 ## Table of Contents
 * [Prerequisites:](#prerequisites-)
@@ -101,9 +100,9 @@ This repository contains :
 
 ## Run NextGen In A Box
 
-### Clone CloudInfra repo
+### Clone NGIAB-CloudInfra repository
 
-Navigate to NextGen directory and clone the repo using below commands:
+Navigate to NextGen directory and clone the repository using below commands:
 
 ```bash
 $ cd ../..
@@ -112,7 +111,7 @@ $ git checkout main
 
 $ cd NGIAB-CloudInfra
 ```  
-Once you are in *CloudInfra* directory, you should see `guide.sh` in it. Now, we are ready to run the model using that script. 
+Once you are in *NGIAB-CloudInfra* directory, you should see `guide.sh` in it. Now, we are ready to run the model using that script. 
 
 ### How to run the model script?
 
@@ -122,10 +121,6 @@ Follow below steps to run `guide.sh` script
 ```bash
     $ ./guide.sh    
 ```
-### Output of the model guide script
-
->*What you will see when you run above `guide.sh`?*
-
 - The script prompts the user to enter the file path for the input data directory where the forcing and config files are stored. 
 
 Run the following command based on your OS and copy the path value:
@@ -144,10 +139,10 @@ $ pwd
 and copy the path
 
 ```
-where <path> is the localtion of NextGen folder.
+where <path> is the location of NextGen folder.
     
 - The script sets the entered directory as the `HOST_DATA_PATH` variable and uses it to find all the catchment, nexus, and realization files using the `find` command.
-- Next, the user is asked whether to run NextGen or exit. If `run_NextGen` is selected, the script pulls the related image from the awiciroh Dockerhub, based on the local machine's architecture:
+- Next, the user is asked whether to run NextGen or exit. If `run_NextGen` is selected, the script pulls the related image from the awiciroh DockerHub, based on the local machine's architecture:
 ```
 For Mac (arm architecture), it pulls awiciroh/ciroh-ngen-image:latest-arm.
 For x86 machines, it pulls awiciroh/ciroh-ngen-image:latest-x86.
@@ -177,5 +172,7 @@ Example NGEN run command for serial mode:
 - After the model has finished running, the script prompts the user whether they want to continue.
 - If the user selects 1, the script opens an interactive shell. If the user selects 2, then the script copies the output data from container to local machine.
 - If the user selects 3, then the script exits.
+
+### Output of the model guide script
 
 The output files are copied to the `outputs` folder in '/NextGen/ngen-data/AWI_03W_113060_002/' directory.
