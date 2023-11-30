@@ -13,6 +13,26 @@
                     "uses_forcing_file": false,
                     "modules": [
                         {
+                            "name": "bmi_c++",
+                            "params": {
+                                "name": "bmi_c++",
+                                "model_type_name": "SLOTH",
+                                "main_output_variable": "z",
+                                "init_config": "/dev/null",
+                                "allow_exceed_end_time": true,
+                                "fixed_time_step": false,
+                                "uses_forcing_file": false,
+                                "model_params": {
+                                    "sloth_ice_fraction_schaake(1,double,m,node)": "0.0",
+                                    "sloth_ice_fraction_xinan(1,double,1,node)": "0.0",
+                                    "sloth_smp(1,double,1,node)": "0.0",
+                                    "EVAPOTRANS": "0.0"
+                                },
+                                "library_file": "/dmod/shared_libs/libslothmodel.so",
+                                "registration_function": "none"
+                            }
+                        },
+                        {
                             "name": "bmi_c",
                             "params": {
                                 "name": "bmi_c",
@@ -44,27 +64,7 @@
                                 "library_file": "/dmod/shared_libs/libcfebmi.so.1.0.0",
                                 "registration_function": "register_bmi_cfe"
                             }
-                        },
-                        {
-                            "name": "bmi_c++",
-                            "params": {
-                                "name": "bmi_c++",
-                                "model_type_name": "SLOTH",
-                                "main_output_variable": "z",
-                                "init_config": "/dev/null",
-                                "allow_exceed_end_time": true,
-                                "fixed_time_step": false,
-                                "uses_forcing_file": false,
-                                "model_params": {
-                                    "sloth_ice_fraction_schaake(1,double,m,node)": "0.0",
-                                    "sloth_ice_fraction_xinan(1,double,1,node)": "0.0",
-                                    "sloth_smp(1,double,1,node)": "0.0",
-                                    "EVAPOTRANS": "0.0"
-                                },
-                                "library_file": "/dmod/shared_libs/libslothmodel.so",
-                                "registration_function": "none"
-                            }
-                        }
+                        }                        
                     ]
                 }
             }
