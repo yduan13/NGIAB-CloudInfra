@@ -1,6 +1,12 @@
-# Welcome to NextGen Framework National Water Model Community Repo. (NextGen In A Box).
+# NextGen In A Box (NGIAB)
 
-We are doing a case study : NWM run for Sipsey Fork,Black Warrior river
+"NextGen In A Box" (NGIAB) is a containerized version of the NextGen National Water Resources Modeling Framework.
+
+The NextGen Water Resources Modeling Framework (NextGen) is a data-centric framework developed by the NOAA OWP team to enhance the forecasting of flooding and drought, improve water resource management, and protect lives, property, and the environment. 
+
+The Cooperative Institute for Research to Operations in Hydrology (CIROH) along with Lynker has developed “NextGen In A Box” - ready-to-run, containerized and cloud-friendly version of NextGen framework, packaged with scripts to help prepare data and get you modeling more quickly. Leveraging open-source technical tools like Git, GitHub, CI/CD, Docker, NextGen In A Box fosters open research practices, enabling transparent and reproducible research outcomes within the NextGen framework.
+
+We are doing a case study : NWM run for Sipsey Fork, Black Warrior River
 - We don’t want to run all of CONUS
 - We want to run NextGen locally
 - We want to have control over inputs / config.
@@ -47,7 +53,7 @@ This repository contains :
 2. Once this is complete, follow the instructions for linux inside your wsl terminal.
 
     
-### Download the input data in "ngen-data" folder from S3 bucket :
+### Download the sample input data in "ngen-data" folder from S3 bucket :
 
 #### Linux & Mac & WSL
 
@@ -59,6 +65,11 @@ This repository contains :
     # to rename your folder
     mv AWI_03W_113060_002 my_data
 ```
+
+### How to Generate Your Own Input Data?
+
+Follow steps in our [ngen-datastream Repo](https://github.com/CIROH-UA/ngen-datastream/tree/main)
+
 ### Case Study Map for the Sipsey Fork, Black Warrior River, AL 
 
 ![AGU_113060_03W_002](https://github.com/shahab122/NGIAB-CloudInfra/assets/28275758/cc7978da-081c-44ba-8877-0e235b5cca43)
