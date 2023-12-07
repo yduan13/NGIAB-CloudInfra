@@ -2,8 +2,9 @@
 
 "NextGen In A Box" (NGIAB) is a containerized version of the NextGen National Water Resources Modeling Framework.
 
+<p align="center">
 <img src="https://github.com/CIROH-UA/NGIAB-CloudInfra/assets/54657/1a647024-67f8-489a-9f5e-86437449b6ff" width="300">
-
+</p>
 The NextGen Water Resources Modeling Framework (NextGen) is a data-centric framework developed by the NOAA OWP team to enhance the forecasting of flooding and drought, improve water resource management, and protect lives, property, and the environment. 
 
 The Cooperative Institute for Research to Operations in Hydrology (CIROH) along with Lynker has developed “NextGen In A Box” - ready-to-run, containerized and cloud-friendly version of NextGen framework, packaged with scripts to help prepare data and get you modeling more quickly. Leveraging open-source technical tools like Git, GitHub, CI/CD, Docker, NextGen In A Box fosters open research practices, enabling transparent and reproducible research outcomes within the NextGen framework.
