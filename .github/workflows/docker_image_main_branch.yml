@@ -30,10 +30,8 @@ jobs:
         uses: ./.github/action_templates/build-and-push
         with:
           docker-auth-token: ${{ secrets.DOCKER_AUTH_TOKEN }}
-          github-sha: ${{ github.sha }}
           image-name: "ciroh-ngen-image"
           dockerfile-name: "Dockerfile"
-          tag-name: ${{vars.TAG_NAME}}
   check_result:
     needs: final
     runs-on: self-hosted
