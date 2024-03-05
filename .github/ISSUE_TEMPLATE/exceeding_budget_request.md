@@ -1,6 +1,6 @@
 ---
 name: Exceeding Budget Request Form
-about: This form would be specifically for projects who anticipate exceeding the $500/month limit. It includes additional fields compared to the regular form, such as justification for the increased budget, expected usage patterns, and approval workflows.
+about: This form would be specifically for projects who anticipate exceeding the $500/month limit. 
 title: ''
 labels: infrastructure
 assignees: ''
