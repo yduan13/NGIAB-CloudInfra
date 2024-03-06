@@ -1,4 +1,4 @@
-e# NextGen In A Box (NGIAB)
+# NextGen In A Box (NGIAB)
 
 "NextGen In A Box" (NGIAB) is a containerized version of the NextGen National Water Resources Modeling Framework.
 
