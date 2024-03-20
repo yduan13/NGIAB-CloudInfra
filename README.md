@@ -2,6 +2,10 @@
 
 "NextGen In A Box" (NGIAB) is a containerized version of the NextGen National Water Resources Modeling Framework.
 
+[![ARM Build and push final image](https://github.com/CIROH-UA/NGIAB-CloudInfra/actions/workflows/docker_image_main_branch.yml/badge.svg)](https://github.com/CIROH-UA/NGIAB-CloudInfra/actions/workflows/docker_image_main_branch.yml)
+[![X86 Build and push final image](https://github.com/CIROH-UA/NGIAB-CloudInfra/actions/workflows/docker_image_main_x86.yml/badge.svg)](https://github.com/CIROH-UA/NGIAB-CloudInfra/actions/workflows/docker_image_main_x86.yml)
+
+
 <p align="center">
 <img src="https://github.com/CIROH-UA/NGIAB-CloudInfra/assets/54657/1a647024-67f8-489a-9f5e-86437449b6ff" width="300">
 </p>
