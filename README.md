@@ -108,7 +108,7 @@ Follow below steps to run `guide.sh` script
 Run the following command and copy the path value:  
 ```bash
     # navigate to the data folder you created earlier
-    cd NextGen/ngen-data/AWI_03W_113060_003 # or NextGen/ngen-data/my_data if you renamed it
+    cd NextGen/ngen-data/my_data
     pwd
     # and copy the path
 
@@ -150,7 +150,7 @@ Example NGEN run command for serial mode:
 
 ### Output of the model guide script
 
-The output files are copied to the `outputs` folder in the '/NextGen/ngen-data/AWI_03W_113060_003/' directory you created in the first step
+The output files are copied to the `outputs` folder in the '/NextGen/ngen-data/my_data/' directory you created in the first step
 
 Using the *flowveldepth.csv files from the 'outputs' folder, the streamflow at the Clear Creek gauge (USGS site ID 02450825) is displayed here. Below is the 'Modelled' vs 'Observed' plot generated in MS Excel after *flowveldepth.csv files are post-processed using Python.
 
