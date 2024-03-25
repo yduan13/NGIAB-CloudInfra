@@ -17,7 +17,7 @@ We are doing a case study : NWM run for Sipsey Fork, Black Warrior River
 - We don’t want to run all of CONUS
 - We want to run NextGen locally
 - We want to have control over inputs / config.
-- How can we do it? Answer: NextGen In A Box
+- How can we do it? Answer: NextGen In A Box (NGIAB)
 
 This repository contains :
 - **Dockerfile** for running NextGen Framework (docker/Dockerfile*)
