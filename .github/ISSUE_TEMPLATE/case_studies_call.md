@@ -1,6 +1,6 @@
 ---
 name: Case Studies Request Form
-about: This template is used to request the resources for Case Studies Call - AWS/Azure/GCP.
+about: CIROH consortium members embarking on research projects utilizing the NextGen framework are invited to request access to the research cloud, encompassing services from AWS and/or Google Cloud using this form.
 title: ''
 labels: infrastructure
 assignees: ''
