@@ -1,6 +1,6 @@
 ---
 name: OnPremise Request Form
-about: This template is used to request the resources for on-premise.
+about: This template is used to request the on-premise requests from CIROH consortium and members utilizing the NextGen framework for the research projects.
 title: ''
 labels: on-prem
 assignees: ''
