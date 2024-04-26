@@ -10,9 +10,9 @@ assignees: ''
 
 **1.	Requester Information:**
 This should include the name and contact information of the person making the request.
-PI's Full Name:
-PI's Affiliated Institute:
-PI's Affiliated Email Address:
+- PI's Full Name:
+- PI's Affiliated Institute:
+- PI's Affiliated Email Address:
 
 **2.	Project Information:** 
 Provide a brief description of the project and its goals. This can help the infrastructure team understand the context and purpose of the requested resources. *Please highlight how this project will be benefit from and/or provide benefit to other resources on the shared infrastructure.*
