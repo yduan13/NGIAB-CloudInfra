@@ -1,6 +1,6 @@
 ---
 name: OnPremise Request Form
-about: This template is used to request the on-premise requests from CIROH members and partners utilizing the NextGen framework for the research projects. This form must be submitted by Principal Investigator (PI) of the project.
+about: This template is used to request the on-premise requests (Pantarhei, Wukong and NSF Allocation - JetStream) from CIROH members and partners utilizing the NextGen framework for the research projects. This form must be submitted by Principal Investigator (PI) of the project.
 title: ''
 labels: on-prem
 assignees: ''
@@ -32,6 +32,8 @@ Specify the compute, storage, and network resources needed for the project. Be a
 3. Memory
 
 4. Disk Space
+
+5. Pantarhei/Wukong/NSF Allocations-JetStream (specify one)
 
 
 **5.	Timeline:** 
