@@ -35,6 +35,9 @@ Specify the compute, storage, and network resources needed for the project. Be a
 
 5. Pantarhei/Wukong/NSF Allocations-JetStream (specify one)
 
+**Working Group Detail**
+
+Working Group 1/2/3/4 (select one): 
 
 **5.	Timeline:** 
 Indicate the expected timeline for the project and when the resources will be needed. This information can help the infrastructure team plan and allocate resources accordingly.
