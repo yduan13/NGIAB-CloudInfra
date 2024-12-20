@@ -60,12 +60,12 @@ cd NextGen/ngen-data
 ```
 
 ### 2. Download Sample Data
-#### Option 1: AWI-007 input data
+#### Option 1: AWI-007 input data (relization file includes - SLOTH, NoahOWP, CFE)
 ```bash
 wget https://ciroh-ua-ngen-data.s3.us-east-2.amazonaws.com/AWI-007/AWI_16_2863657_007.tar.gz
 tar -xf AWI_16_2863657_007.tar.gz
 ```
-#### Option 2: AWI-008 input data
+#### Option 2: AWI-008 input data (realization file includes - SLOTH, Demostration LSTM)
 ```bash
 wget --no-parent https://ciroh-ua-ngen-data.s3.us-east-2.amazonaws.com/AWI-008/AWI_16_2863806_008.tar.gz
 tar -xf AWI_16_2863806_008.tar.gz
