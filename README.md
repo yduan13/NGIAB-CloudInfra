@@ -63,7 +63,7 @@ cd NextGen/ngen-data
 #### Option 1: AWI-009 input data (realization file includes - SLOTH, NoahOWP, CFE) - calibrated realization file for Provo River near Woodland, UT
 ```bash
 wget https://ciroh-ua-ngen-data.s3.us-east-2.amazonaws.com/AWI-009/AWI_16_10154200_009.tar.gz
-tar -xf AWI_16_2863657_007.tar.gz
+tar -xf AWI_16_10154200_009.tar.gz
 ```
 #### Option 2: AWI-007 input data (realization file includes - SLOTH, NoahOWP, CFE)
 ```bash
