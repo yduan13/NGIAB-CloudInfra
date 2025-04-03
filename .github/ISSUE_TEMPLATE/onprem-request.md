@@ -1,6 +1,6 @@
 ---
 name: OnPremise Request Form
-about: PI leading CIROH projects may use this form to request CIROH on-premise requests (Pantarhei, Wukong and NSF Allocation - JetStream). Access is available to all consortium members and partners.
+about: PI leading CIROH projects may use this form to request CIROH on-premise requests (Pantarhei, Wukong and NSF ACCESS Allocations). Access is available to all consortium members and partners.
 title: ''
 labels: on-prem
 assignees: ''
@@ -33,7 +33,9 @@ Specify the compute, storage, and network resources needed for the project. Be a
 
 4. Disk Space
 
-5. Pantarhei/Wukong/NSF Allocations-JetStream (specify one)
+5. Pantarhei/Wukong/NSF ACCESS Allocation (specify one)
+  More info about 
+   More info about NSF ACCESS : https://allocations.access-ci.org/resources
 
 **5. Working Group Detail**
 
