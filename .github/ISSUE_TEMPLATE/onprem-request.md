@@ -33,9 +33,9 @@ Specify the compute, storage, and network resources needed for the project. Be a
 
 4. Disk Space
 
-5. Pantarhei/Wukong/NSF ACCESS Allocation (specify one)
-  More info about 
-   More info about NSF ACCESS : https://allocations.access-ci.org/resources
+5. Pantarhei/NSF ACCESS Allocation (specify one)
+  More info about Pantarhei: https://docs.ciroh.org/docs/services/on-prem/Pantarhei/
+  More info about NSF ACCESS : https://allocations.access-ci.org/resources
 
 **5. Working Group Detail**
 
