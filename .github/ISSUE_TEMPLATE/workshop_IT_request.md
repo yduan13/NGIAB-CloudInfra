@@ -1,6 +1,6 @@
 ---
 name: Workshop Resource Request Form
-about: Workshop leads may use this form to request computing resources (AWS, Google Cloud, NSF ACCESS or CIROH-2i2c JupyterHub) for CIROH workshops. Access is available to all consortium members and partners.
+about: Workshop leads may use this form to request computing resources (AWS, GCP, NSF ACCESS or CIROH-2i2c JupyterHub) for CIROH workshops.
 title: 'Workshop Resource Request: [Workshop Name]'
 labels: workshop, infrastructure
 assignees: ''
