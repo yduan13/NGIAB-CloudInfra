@@ -97,6 +97,7 @@ RUN echo $(git remote get-url origin | sed 's/\.git$//' | awk '{print $0 "/tree/
 
 # Define common build arguments
 ARG COMMON_BUILD_ARGS="-DNGEN_WITH_EXTERN_ALL=ON \
+    -DNGEN_UPDATE_GIT_SUBMODULES:BOOL=OFF \
     -DNGEN_WITH_NETCDF:BOOL=ON \
     -DNGEN_WITH_BMI_C:BOOL=ON \
     -DNGEN_WITH_BMI_FORTRAN:BOOL=ON \
