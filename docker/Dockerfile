@@ -85,6 +85,9 @@ RUN find src/troute-routing/ -name "__pycache__" -exec rm -rf {} + && \
 
 RUN uv pip install --config-setting='--build-option=--use-cython' src/troute-network/
 RUN uv build --wheel --config-setting='--build-option=--use-cython' src/troute-network/
+
+RUN uv pip install --upgrade pip setuptools wheel Cython==0.29.36
+
 RUN uv pip install --no-build-isolation --config-setting='--build-option=--use-cython' src/troute-routing/
 RUN uv build --wheel --no-build-isolation --config-setting='--build-option=--use-cython' src/troute-routing/
 RUN uv build --wheel --no-build-isolation src/troute-config/
