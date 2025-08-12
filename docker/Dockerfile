@@ -3,8 +3,6 @@ ENV TROUTE_REPO=CIROH-UA/t-route
 ENV TROUTE_BRANCH=ngiab
 ENV NGEN_REPO=CIROH-UA/ngen
 ENV NGEN_BRANCH=ngiab
-# ENV NGEN_REPO=yduan13/ngen
-# ENV NGEN_BRANCH=main
 
 # Install final dependencies to make sure ngen is build and deployed with matching versions
 # Needed here for build caching
@@ -73,21 +71,8 @@ RUN ./compiler.sh no-e
 
 # install / build using UV because it's so much faster
 # no build isolation needed because of cython namespace issues
-# 删除旧的虚拟环境
-RUN rm -rf /ngen/.venv
-# 重新创建虚拟环境
-RUN uv venv
-# 升级 pip 并安装必要的构建工具
-RUN pip3 install --upgrade pip setuptools wheel Cython==0.29.33
-# 清理源码目录下所有缓存的 pyc 文件和 __pycache__ 文件夹
-RUN find src/troute-routing/ -name "__pycache__" -exec rm -rf {} + && \
-    find src/troute-routing/ -name "*.pyc" -delete
-
 RUN uv pip install --config-setting='--build-option=--use-cython' src/troute-network/
 RUN uv build --wheel --config-setting='--build-option=--use-cython' src/troute-network/
-
-RUN uv pip install --upgrade pip setuptools wheel Cython==0.29.24
-
 RUN uv pip install --no-build-isolation --config-setting='--build-option=--use-cython' src/troute-routing/
 RUN uv build --wheel --no-build-isolation --config-setting='--build-option=--use-cython' src/troute-routing/
 RUN uv build --wheel --no-build-isolation src/troute-config/
@@ -109,11 +94,9 @@ ENV PATH=${PATH}:/usr/lib64/mpich/bin
 
 WORKDIR /ngen/ngen
 RUN echo $(git remote get-url origin | sed 's/\.git$//' | awk '{print $0 "/tree/" }' | tr -d '\n' && git rev-parse HEAD) >> /tmp/ngen_url
-RUN echo $(git remote get-url origin | sed 's/\.git$//' | awk '{print $0 "/tree/"}' | tr -d '\n' && git rev-parse HEAD)
 
 # Define common build arguments
-ARG COMMON_BUILD_ARGS="-DNGEN_WITH_EXTERN_ALL=ON \
-    -DNGEN_UPDATE_GIT_SUBMODULES:BOOL=OFF \
+ARG COMMON_BUILD_ARGS="-DNGEN_WITH_EXTERN_ALL=ON \    
     -DNGEN_WITH_NETCDF:BOOL=ON \
     -DNGEN_WITH_BMI_C:BOOL=ON \
     -DNGEN_WITH_BMI_FORTRAN:BOOL=ON \
@@ -123,6 +106,7 @@ ARG COMMON_BUILD_ARGS="-DNGEN_WITH_EXTERN_ALL=ON \
     -DNGEN_WITH_UDUNITS:BOOL=ON \
     -DUDUNITS_QUIET:BOOL=ON \
     -DNGEN_WITH_TESTS:BOOL=OFF \
+    -DNGEN_UPDATE_GIT_SUBMODULES:BOOL=OFF \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=. \
     -DCMAKE_CXX_FLAGS='-fuse-ld=lld'"
