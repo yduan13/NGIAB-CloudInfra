@@ -73,6 +73,16 @@ RUN ./compiler.sh no-e
 
 # install / build using UV because it's so much faster
 # no build isolation needed because of cython namespace issues
+# 删除旧的虚拟环境
+RUN rm -rf /ngen/.venv
+# 重新创建虚拟环境
+RUN uv venv
+# 升级 pip 并安装必要的构建工具
+RUN pip3 install --upgrade pip setuptools wheel Cython==0.29.33
+# 清理源码目录下所有缓存的 pyc 文件和 __pycache__ 文件夹
+RUN find src/troute-routing/ -name "__pycache__" -exec rm -rf {} + && \
+    find src/troute-routing/ -name "*.pyc" -delete
+
 RUN uv pip install --config-setting='--build-option=--use-cython' src/troute-network/
 RUN uv build --wheel --config-setting='--build-option=--use-cython' src/troute-network/
 RUN uv pip install --no-build-isolation --config-setting='--build-option=--use-cython' src/troute-routing/
