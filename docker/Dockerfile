@@ -94,6 +94,7 @@ ENV PATH=${PATH}:/usr/lib64/mpich/bin
 
 WORKDIR /ngen/ngen
 RUN echo $(git remote get-url origin | sed 's/\.git$//' | awk '{print $0 "/tree/" }' | tr -d '\n' && git rev-parse HEAD) >> /tmp/ngen_url
+RUN echo $(git remote get-url origin | sed 's/\.git$//' | awk '{print $0 "/tree/" }' | tr -d '\n' && git rev-parse HEAD)
 
 # Define common build arguments
 ARG COMMON_BUILD_ARGS="-DNGEN_WITH_EXTERN_ALL=ON \    
