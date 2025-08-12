@@ -1,10 +1,10 @@
 FROM rockylinux:9.1 AS base
 ENV TROUTE_REPO=CIROH-UA/t-route
 ENV TROUTE_BRANCH=ngiab
-# ENV NGEN_REPO=CIROH-UA/ngen
-# ENV NGEN_BRANCH=ngiab
-ENV NGEN_REPO=yduan13/ngen
-ENV NGEN_BRANCH=main
+ENV NGEN_REPO=CIROH-UA/ngen
+ENV NGEN_BRANCH=ngiab
+# ENV NGEN_REPO=yduan13/ngen
+# ENV NGEN_BRANCH=main
 
 # Install final dependencies to make sure ngen is build and deployed with matching versions
 # Needed here for build caching
