@@ -83,8 +83,7 @@ WORKDIR /ngen
 ## make sure clone isn't cached if repo is updated
 ADD https://api.github.com/repos/${NGEN_REPO}/git/refs/heads/${NGEN_BRANCH} /tmp/version.json
 # RUN git clone --single-branch --branch $NGEN_BRANCH https://github.com/$NGEN_REPO.git && \
-# RUN git clone --single-branch --branch $NGEN_BRANCH https://github.com/yduan13/ngen.git && \
-RUN git clone https://github.com/yduan13/ngen.git && \
+RUN git clone --single-branch --branch $NGEN_BRANCH https://github.com/yduan13/ngen.git && \
     cd ngen && \
     git submodule update --init --recursive --depth 1
 
