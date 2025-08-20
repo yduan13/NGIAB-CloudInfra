@@ -88,7 +88,9 @@ RUN git clone --single-branch --branch $NGEN_BRANCH https://github.com/yduan13/n
     git submodule update --init --recursive --depth 1 && \
     cd extern/cfe && \
     rm -rf cfe && \
-    git clone https://github.com/yduan13/cfe.git
+    git clone https://github.com/yduan13/cfe.git && \
+    echo $(date +%s)    
+    # git clone https://github.com/yduan13/cfe.git
 
 
 
