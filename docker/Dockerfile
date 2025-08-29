@@ -80,6 +80,10 @@ RUN uv build --wheel --no-build-isolation src/troute-nwm/
 
 FROM troute_prebuild AS ngen_clone
 WORKDIR /ngen
+
+# build-arg 用来强制 bust 缓存
+ARG CACHEBUST=1
+
 ## make sure clone isn't cached if repo is updated
 ADD https://api.github.com/repos/${NGEN_REPO}/git/refs/heads/${NGEN_BRANCH} /tmp/version.json
 # RUN git clone --single-branch --branch $NGEN_BRANCH https://github.com/$NGEN_REPO.git && \
@@ -89,7 +93,8 @@ RUN git clone --single-branch --branch $NGEN_BRANCH https://github.com/yduan13/n
     cd extern/cfe && \
     rm -rf cfe && \
     git clone https://github.com/yduan13/cfe.git && \
-    echo $(date +%s)    
+    echo "cache bust: $CACHEBUST"
+    # echo $(date +%s)    
     # git clone https://github.com/yduan13/cfe.git
 
 
