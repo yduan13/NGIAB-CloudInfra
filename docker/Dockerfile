@@ -81,7 +81,7 @@ RUN uv build --wheel --no-build-isolation src/troute-nwm/
 FROM troute_prebuild AS ngen_clone
 WORKDIR /ngen
 
-# build-arg 用来强制 bust 缓存
+# build-arg to force bust cached
 ARG CACHEBUST=1
 
 ## make sure clone isn't cached if repo is updated
