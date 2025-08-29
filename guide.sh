@@ -59,7 +59,7 @@ TETHYS_CONTAINER_NAME="tethys-ngen-portal"
 TETHYS_IMAGE_NAME="awiciroh/tethys-ngiab"
 TEEHR_IMAGE_NAME="awiciroh/ngiab-teehr"
 # NGEN_IMAGE_NAME="awiciroh/ciroh-ngen-image"
-NGEN_IMAGE_NAME="yduan13/ciroh-ngen-image2"
+NGEN_IMAGE_NAME="yduan13/ciroh-ngen-image3"
 
 # Function for animated loading with gradient colors
 show_loading() {
