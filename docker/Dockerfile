@@ -119,16 +119,16 @@ ARG COMMON_BUILD_ARGS="-DNGEN_WITH_EXTERN_ALL=ON \
     -DNGEN_WITH_TESTS:BOOL=OFF \
     -DNGEN_UPDATE_GIT_SUBMODULES:BOOL=OFF \
     -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_INSTALL_PREFIX=. \
-    -DCMAKE_CXX_FLAGS='-fuse-ld=lld -O2 -fno-lto'
-#    -DCMAKE_CXX_FLAGS='-fuse-ld=lld'"
+    -DCMAKE_INSTALL_PREFIX=."
+    
 # lld is the linker, it's faster than the default
 
-
 # Build Ngen serial
-RUN cmake -G Ninja -B cmake_build_serial -S . ${COMMON_BUILD_ARGS} -DNGEN_WITH_MPI:BOOL=OFF && \
+RUN cmake -G Ninja -B cmake_build_serial -S . ${COMMON_BUILD_ARGS} \
+    -DCMAKE_CXX_FLAGS="-fuse-ld=lld -O2 -fno-lto" \
+    -DNGEN_WITH_MPI:BOOL=OFF && \
     cmake --build cmake_build_serial --target all -- -j $(nproc)
-
+    
 ARG MPI_BUILD_ARGS="-DNGEN_WITH_MPI:BOOL=ON \
     -DNetCDF_ROOT=/usr/lib64/mpich \
     -DCMAKE_PREFIX_PATH=/usr/lib64/mpich \
