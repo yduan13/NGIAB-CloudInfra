@@ -120,7 +120,8 @@ ARG COMMON_BUILD_ARGS="-DNGEN_WITH_EXTERN_ALL=ON \
     -DNGEN_UPDATE_GIT_SUBMODULES:BOOL=OFF \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=. \
-    -DCMAKE_CXX_FLAGS='-fuse-ld=lld'"
+    -DCMAKE_CXX_FLAGS='-fuse-ld=lld -O2 -fno-lto'
+#    -DCMAKE_CXX_FLAGS='-fuse-ld=lld'"
 # lld is the linker, it's faster than the default
 
 
